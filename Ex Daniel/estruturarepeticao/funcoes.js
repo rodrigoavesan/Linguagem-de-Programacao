@@ -14,6 +14,64 @@ function exer0(){
 
 }
 
+function exe1(){
+    let grupo1 = []
+    let contador = 0
+    while(contador < 4){
+        grupo1.push(Number(prompt(`Digite o ${contador+1}º número do Grupo 1: `)))
+        contador++
+    }
+
+    let grupo2 = []
+    contador = 0
+    while(contador < 4){
+        grupo2.push(Number(prompt(`Digite o ${contador+1}º número do Grupo 2: `)))
+        contador++
+    }
+
+    let grupo3 = []
+    contador = 0
+    while(contador < 4){
+        grupo3.push(Number(prompt(`Digite o ${contador+1}º número do Grupo 3: `)))
+        contador++
+    }
+
+    let grupo4 = []
+    contador = 0
+    while(contador < 4){
+        grupo4.push(Number(prompt(`Digite o ${contador+1}º número do Grupo 4: `)))
+        contador++
+    }
+
+    let grupo5 = []
+    contador = 0
+    while(contador < 4){
+        grupo5.push(Number(prompt(`Digite o ${contador+1}º número do Grupo 5: `)))
+        contador++
+    }
+
+    alert(`Grupo 1 - (${grupo1})\n Grupo 2 - (${grupo2})\n Grupo 3 - (${grupo3})\n Grupo 4 - (${grupo4})\n Grupo 5 - (${grupo5})\n`)
+
+    alert(`Ordem crescente dos grupos:\n \n   Grupo 1 - (${grupo1.sort()})\n   Grupo 2 - (${grupo2.sort()})\n   Grupo 3 - (${grupo3.sort()})\n   Grupo 4 - (${grupo4.sort()})\n   Grupo 5 - (${grupo5.sort()})\n`)
+
+    alert(`Ordem decrescente dos grupos:\n \n   Grupo 1 - (${grupo1.sort().reverse()})\n   Grupo 2 - (${grupo2.sort().reverse()})\n   Grupo 3 - (${grupo3.sort().reverse()})\n   Grupo 4 - (${grupo4.sort().reverse()})\n   Grupo 5 - (${grupo5.sort().reverse()})\n`)
+}
+
+function exer2(){
+    let x = 0
+    let preco = 5
+    let qntd, lucro, preju
+    while(preco>0.5){
+        preco = (5-(x*0.5)).toFixed(2)
+        qntd = 120+(26*x)
+        lucro = preco*qntd-200
+        preju = (lucro>0)&&"lucro"||"prejuizo"
+        alert(`Se forem vendidos ingressos a R$${preco} , serão vendidos ${qntd} ingressos totalizando R$${lucro.toFixed(2)} de ${preju}`)
+        x++
+    }
+}
+
+
 function exer3(){
     let cont = 1 
     let idade 
@@ -40,7 +98,7 @@ function exer3(){
         cont++
 
         alert(`Quantidade de pessoas por Faixa etaria: Até 15: ${f1} , De 16 a 30: ${f2} , De 31 a 45: ${f3} , De 46 a 60: ${f4} ,De 60 pra mais: ${f5}`)
-        alert(`Porcentagem de pessoas  com até 15: ${f1/0.25}%, Porcentagem de pessoas com até 60: ${f5/0.25}%`)
+        alert(`Porcentagem de pessoas  com até 15: ${f1/0.125}%, Porcentagem de pessoas com até 60: ${f5/0.125}%`)
     }
 }
 
@@ -68,7 +126,7 @@ function exer6(){
         }
         cont++
     }
-    alert(`Total a vista: R$${t_v.toFixed(2)}, Total a prazo: R$${t_p.toFixed(2)} ,Valor geral: R$${(t_v+t_p).toFixed(2)} `)
+    alert("Total a vista: R$${t_v.toFixed(2)}, Total a prazo: R$${t_p.toFixed(2)} ,Valor geral: R$${(t_v+t_p).toFixed(2)} ")
     alert(`Primeira parcela do total a prazo: ${(t_p/3).toFixed(2)}`)
 }
 
