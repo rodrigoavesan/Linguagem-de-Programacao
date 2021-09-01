@@ -14,47 +14,47 @@ function exer0(){
 
 }
 
-function exe1(){
-    let grupo1 = []
-    let contador = 0
-    while(contador < 4){
-        grupo1.push(Number(prompt(`Digite o ${contador+1}º número do Grupo 1: `)))
-        contador++
+function exer1(){
+    let g1 = []
+    let cont = 0
+    while(cont < 4){
+        g1.push(Number(prompt(`Digite o ${cont+1}º número do Grupo 1: `)))
+        cont++
     }
 
-    let grupo2 = []
-    contador = 0
-    while(contador < 4){
-        grupo2.push(Number(prompt(`Digite o ${contador+1}º número do Grupo 2: `)))
-        contador++
+    let g2 = []
+    cont = 0
+    while(cont < 4){
+        g2.push(Number(prompt(`Digite o ${cont+1}º número do Grupo 2: `)))
+        cont++
     }
 
-    let grupo3 = []
-    contador = 0
-    while(contador < 4){
-        grupo3.push(Number(prompt(`Digite o ${contador+1}º número do Grupo 3: `)))
-        contador++
+    let g3 = []
+    cont = 0
+    while(cont < 4){
+        g3.push(Number(prompt(`Digite o ${cont+1}º número do Grupo 3: `)))
+        cont++
     }
 
-    let grupo4 = []
-    contador = 0
-    while(contador < 4){
-        grupo4.push(Number(prompt(`Digite o ${contador+1}º número do Grupo 4: `)))
-        contador++
+    let g4 = []
+    cont = 0
+    while(cont < 4){
+        g4.push(Number(prompt(`Digite o ${cont+1}º número do Grupo 4: `)))
+        cont++
     }
 
-    let grupo5 = []
-    contador = 0
-    while(contador < 4){
-        grupo5.push(Number(prompt(`Digite o ${contador+1}º número do Grupo 5: `)))
-        contador++
+    let g5 = []
+    cont = 0
+    while(cont < 4){
+        g5.push(Number(prompt(`Digite o ${cont+1}º número do Grupo 5: `)))
+        cont++
     }
 
-    alert(`Grupo 1 - (${grupo1})\n Grupo 2 - (${grupo2})\n Grupo 3 - (${grupo3})\n Grupo 4 - (${grupo4})\n Grupo 5 - (${grupo5})\n`)
+    alert(`Grupo 1 - (${g1})\n Grupo 2 - (${g2})\n Grupo 3 - (${g3})\n Grupo 4 - (${g4})\n Grupo 5 - (${g5})\n`)
 
-    alert(`Ordem crescente dos grupos:\n \n   Grupo 1 - (${grupo1.sort()})\n   Grupo 2 - (${grupo2.sort()})\n   Grupo 3 - (${grupo3.sort()})\n   Grupo 4 - (${grupo4.sort()})\n   Grupo 5 - (${grupo5.sort()})\n`)
+    alert(`Ordem crescente dos grupos:\n \n   Grupo 1 - (${g1.sort(function(a, b){return a - b})})\n   Grupo 2 - (${g2.sort(function(a, b){return a - b})})\n   Grupo 3 - (${g3.sort(function(a, b){return a - b})})\n   Grupo 4 - (${g4.sort(function(a, b){return a - b})})\n   Grupo 5 - (${g5.sort(function(a, b){return a - b})})\n`)
 
-    alert(`Ordem decrescente dos grupos:\n \n   Grupo 1 - (${grupo1.sort().reverse()})\n   Grupo 2 - (${grupo2.sort().reverse()})\n   Grupo 3 - (${grupo3.sort().reverse()})\n   Grupo 4 - (${grupo4.sort().reverse()})\n   Grupo 5 - (${grupo5.sort().reverse()})\n`)
+    alert(`Ordem decrescente dos grupos:\n \n   Grupo 1 - (${g1.reverse()})\n   Grupo 2 - (${g2.reverse()})\n   Grupo 3 - (${g3.reverse()})\n   Grupo 4 - (${g4.reverse()})\n   Grupo 5 - (${g5.reverse()})\n`)
 }
 
 function exer2(){
