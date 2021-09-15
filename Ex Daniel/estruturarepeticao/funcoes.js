@@ -130,6 +130,32 @@ function exer6(){
     alert(`Primeira parcela do total a prazo: ${(t_p/3).toFixed(2)}`)
 }
 
+function exer21(){
+    let op
+    let qt1 = 0; let qt2 = 0; let qt3 = 0; let qt4 = 0; let qtnul = 0; let qtbra = 0
+
+    do {
+        op = Number(prompt(`Informe \n1. Candidato 1 \n2.  Candidato 2 \n3.  Candidato 3 \n4.  Candidato 4 \n5. Nulo \n6. Branco \n0. Sair`))
+        switch(op){
+            case 1: qt1++ 
+                    break
+            case 2: qt2++; break
+            case 3: qt3++ 
+                    break
+            case 4: qt4++; break
+            case 5: qtnul++; break
+            case 6: qtbra++; break
+            case 0: alert(`Encerrando as votaçõrs `); break
+            default: alert(`Opção inválida, tente novamente`)     
+        }
+    }
+    while (op != 0)
+    let total = qt1 + qt2 + qt3 + qt4 + qtbra + qtnul
+    alert(` Candidato 1: ${qt1}  Candidato 2: ${qt2}  Candidato 3: ${qt3}  Candidato 4: ${qt4} Branco: ${qtbra} Nulo: ${qtnul}`)
+    alert(`% Branco: ${qtbra/total*100} % Nulo: ${qtnul/total*100}`)
+}
+
+
 function exer23(){
     let op, sal, n_sal, m
     do {
