@@ -130,6 +130,88 @@ function exer6(){
     alert(`Primeira parcela do total a prazo: ${(t_p/3).toFixed(2)}`)
 }
 
+function exer15(){
+    let cts = 0
+    let ctf= 0
+    let ctn = 0
+    let ctm = 0
+    let ctmn = 0
+
+ for (let x=1;x<=10;x++){
+     sex = prompt('Informe o seu sexo (M-F)')
+     resp= prompt('Informe sua resp (S-N)') 
+     if (resp == "s") {
+     cts = cts + 1
+     }
+     if (resp == "n") {
+         ctn = ctn + 1
+         }
+     if (sex == "f" && resp=="n")  {
+         ctf = ctf + 1
+     }
+     if (sex == "m"){
+         ctm = ctm + 1
+             if (resp=="n"){
+                 ctmn = ctmn + 1
+             }
+     }
+ }
+ resul = ctmn * ctm / 1000
+ 
+     alert('A quantidade de pessoas que responderam sim é ${cts}')
+     alert('A quantidade de pessoas que responderam sim é ${ctn}')
+     alert('A quantidade de mulheres que responderam não é ${ctf}')
+     alert('A quantidade de mulheres que responderam não é ${resul}')
+ 
+ }
+
+function exer18() {
+    let respostas = []
+    let resposta
+    while (true) {
+        let resp = Number(prompt("Digite a idade:"))
+        if (resp < 0) break
+        resposta = [resp]
+
+        while (true) {
+            resp = prompt("Digite o sexo: (M/F)")
+            if (resp.toUpperCase() != "M" && resp.toUpperCase() != "F") {
+                alert("Digite 'M' para Masculino ou 'F' para Feminino.")
+            } else break
+        }
+        resposta.push(resp.toUpperCase())
+
+        resp = Number(prompt("Digite o salario:"))
+        resposta.push(resp)
+        respostas.push(resposta)
+    }
+    let sol
+    let total = 0, qntd = 0, menor = Infinity, maior = -50, mlhrs = 0, busy = [0, 0, Infinity]
+    for (x of respostas) {
+        total += x[2]
+        qntd++
+
+        if (x[0] < menor) {
+            menor = x[0]
+        }
+        if (x[0] > maior) {
+            maior = x[0]
+        }
+
+        if (x[1] == "F" && x[2] <= 200) {
+            mlhrs++
+        }
+
+        if (x[2] < busy[2]) {
+            busy = x
+        }
+    }
+
+    sol = `Media de salario: ${total / qntd}\nMaior idade = ${maior}\nMenor idade = ${menor}\nMulheres com salario menor a R$200 = ${mlhrs}\nPessoa com o menor salario = Idade:${busy[0]} Sexo:${busy[1]} Salario:${busy[2]} `
+
+    alert(sol)
+}
+
 function exer21(){
     let op
     let qt1 = 0; let qt2 = 0; let qt3 = 0; let qt4 = 0; let qtnul = 0; let qtbra = 0
